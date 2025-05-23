@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const TimeTableSchema = new mongoose.Schema({
+const Bt_TimeTableSchema = new mongoose.Schema({
   time: {
     type: String,
     required: true,
@@ -16,10 +16,10 @@ const TimeTableSchema = new mongoose.Schema({
   },
 
   floor: {
-    type: Number,
+    type: String,
     required: true,
   },
-  class: {
+  className: {
     type: String,
     required: true,
   },
@@ -33,5 +33,6 @@ const TimeTableSchema = new mongoose.Schema({
   },
 });
 
-export const timeTable =
-  mongoose.models.timeTable || mongoose.model("timeTable", TimeTableSchema);
+export const BT_timeTable =
+  mongoose.models.BT_timeTable ||
+  mongoose.model("BT_timeTable", Bt_TimeTableSchema);

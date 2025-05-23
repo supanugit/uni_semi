@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { connectDB } from "./DB/connectDB";
-import { IT_timeTable } from "./DB/model/it_Model";
+import { connectDB } from "../DB/connectDB";
+import { IT_timeTable } from "../DB/model/it_Model";
 
 export async function GET(req: NextRequest) {
   const dayParam = req.nextUrl.searchParams.get("day");
@@ -30,9 +30,11 @@ export async function GET(req: NextRequest) {
   const dayName = dayNames[dayNumber];
 
   try {
-    await connectDB(); // ✅ Await DB connection
+    await connectDB();
 
-    const cls = await IT_timeTable.find({ day: dayName }); // ✅ Await query
+    const cls = await IT_timeTable.find({
+      day: dayName,
+    });
 
     if (!cls || cls.length === 0) {
       return NextResponse.json({ message: "No Class found" }, { status: 404 });
