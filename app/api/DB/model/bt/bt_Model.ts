@@ -17,19 +17,15 @@ const Bt_TimeTableSchema = new mongoose.Schema({
 
   floor: {
     type: String,
-    required: true,
   },
   className: {
     type: String,
-    required: true,
   },
   building: {
     type: String,
-    required: true,
   },
   hall: {
     type: String,
-    required: true,
   },
 });
 

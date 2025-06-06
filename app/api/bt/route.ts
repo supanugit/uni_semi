@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { connectDB } from "./../DB/connectDB";
-import {BT_timeTable  } from "../DB/model/bt/bt_Model";
+import { connectDB } from "../DB/connectDB";
+import { BT_timeTable } from "../DB/model/bt/bt_Model";
 
 export async function GET(req: NextRequest) {
   const dayParam = req.nextUrl.searchParams.get("day");
