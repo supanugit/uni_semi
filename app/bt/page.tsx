@@ -23,9 +23,9 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center w-full min-h-screen bg-gray-100 p-6">
       {fdata.length > 0 ? (
         <div className="w-full max-w-4xl space-y-4">
-          {fdata.map((item) => (
+          {fdata.map((item, i) => (
             <div
-              key={item._id}
+              key={i}
               className="bg-white rounded-xl shadow-md p-6 border border-gray-300">
               <h2 className="text-xl font-semibold">{item.subject}</h2>
               <p>Class Name: {item.className}</p>
