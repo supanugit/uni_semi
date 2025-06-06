@@ -2,9 +2,20 @@ import { NextRequest, NextResponse } from "next/server";
 import { Fn_itdata } from "./get_all/it/data";
 import { Fn_etdata } from "./get_all/et/data";
 import { Fn_btdata } from "./get_all/bt/data";
-
+// interface classDetailsprop {
+//   _id: String;
+//   time: String;
+//   day: String;
+//   subject: String;
+//   floor: String;
+//   className: String;
+//   building: String;
+//   hall: String;
+//   __v: number;
+// }
 export async function POST(req: NextRequest) {
   const department = req.nextUrl.searchParams.get("dep");
+
   let classDetails: any;
 
   try {
