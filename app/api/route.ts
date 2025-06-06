@@ -16,7 +16,7 @@ import { Fn_btdata } from "./get_all/bt/data";
 export async function POST(req: NextRequest) {
   const department = req.nextUrl.searchParams.get("dep");
 
-  let classDetails: any;
+  let classDetails;
 
   try {
     if (department == "it") {
