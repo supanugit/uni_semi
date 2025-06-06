@@ -1,9 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
-
-export default function Page({}: Props) {
+export default function Page() {
   return (
     <div className="w-full h-screen flex justify-center items-center bg-gradient-to-br from-blue-100 to-indigo-200">
       <div className="flex gap-6">
